@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'sqlite3'
+gem 'populator'
+
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
