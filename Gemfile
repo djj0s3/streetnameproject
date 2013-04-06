@@ -5,7 +5,11 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#postgres
+gem 'pg'
+
+#unicorn web server
+gem 'unicorn'
 
 
 # Gems used only for assets and not required
@@ -19,6 +23,9 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+#bootstrap
+gem 'bootstrap-sass', '~> 2.3.1.0'
 
 gem 'jquery-rails'
 

@@ -1,4 +1,8 @@
 Streetnameproject::Application.routes.draw do
+  root :to => 'streets#home'
+  resources :streets
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
