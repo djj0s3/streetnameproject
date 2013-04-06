@@ -1,4 +1,12 @@
 class StreetsController < ApplicationController
+
+  #home for the site
+  def home
+    respond_to do |format|
+      format.html # index.html.erb
+    end
+  end
+
   # GET /streets
   # GET /streets.json
   def index

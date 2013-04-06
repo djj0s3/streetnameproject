@@ -1,4 +1,5 @@
 Streetnameproject::Application.routes.draw do
+  root :to => 'streets#home'
   resources :streets
 
 
