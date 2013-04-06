@@ -18,8 +18,6 @@ rescue SQLITE3::Exception => e
   puts "Excpetion occurred"
   puts e
  
-ensure 
-  db.close if db
 end
   
 
@@ -33,7 +31,13 @@ doc.to_enum.with_index(1).each do |street, i|
     next 
   end
   #puts street.child.content
+  db.execute "INSERT INTO Streets VALUES('" + street.child.content + "','" + street.next.content + "');"
 end
 
 
+#Same for http://www.jdcjr.us/SFStreets.html
 
+#jdcjr_doc = Nokogiri::HTML(open('http://www.jdcjr.us/SFStreets.html'))
+
+#doc = jdcjr_doc.search('img')
+#doc.to_enum
