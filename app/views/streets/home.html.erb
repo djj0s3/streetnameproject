@@ -29,12 +29,37 @@
 	} else {
 	error('not supported');
 	}
+
+	$(document).ready(function(){
+		var h = $(window).height(),
+        offsetTop = 60; // Calculate the top offset
+
+    $('#map-canvas').css('height', (h - offsetTop));
+	});
+	
+
+	$(window).resize(function () {
+    var h = $(window).height(),
+        offsetTop = 60; // Calculate the top offset
+
+    $('#map-canvas').css('height', (h - offsetTop));
+}).resize();
     </script>
 <% end %>
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span12">
+		<div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Current Street:</li>
+              <p>street name here</p>
+              <li class="nav-header">Street History:</li>
+              <p>text here</p>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+		<div class="map-container span9">
 			<div id="map-canvas"></div>
 		</div>
 	</div>

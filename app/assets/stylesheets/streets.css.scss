@@ -12,13 +12,22 @@ body {
 	  padding-left: 5px;
 	  padding-right: 5px;
 	}
+	body {
+		padding: 0;
+	}
 }
+
+@media (max-width: 767px) {
+	.navbar-fixed-top {
+		margin: 0;
+	}
+}
+
+.map-container {
+}
+
 #map-canvas {
-	top: 41px;
-	bottom: 0;
-	position: absolute;
-	left: 0;
-	right: 0;
+
 }
 
 #map-canvas label { 
