@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'sqlite3'
 gem 'populator'
+gem 'nokogiri'
 
 gem 'rails', '3.2.13'
 
